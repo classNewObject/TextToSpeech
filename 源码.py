@@ -97,7 +97,7 @@ def change_cn():
 def get_content(file_dir):
     """获取文件内容"""
     try:
-        with open(file_dir) as f:
+        with open(file_dir, encoding="utf-8") as f:
             window["textContent"].update(f.read())
     except FileNotFoundError:
         sg.PopupError("获取错误", "路径错误或为空，获取失败！")
